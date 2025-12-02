@@ -28,8 +28,8 @@ Ingénieur logiciel et développeur Full Stack basé à [Dakar](https://fr.wikip
 #### 🚀 Mes Compétences
 
 **Backend:**  
-- **Langages :** `PHP`, `Node.js`, `Python`, `JavaScript`  
-- **Frameworks :** `Laravel`, `Django`, `Express.js`  
+- **Langages :** `PHP`, `Python`, `Java`,`JavaScript`, `Node.js`
+- **Frameworks :** `Laravel`, `Django`, `SpringBoot`, `Express.js`, `Nest.js`
 - **Bases de données :** `MySQL`, `PostgreSQL`, `MongoDB`  
 - **Architectures :** `Microservices`, `Client-Server`, `Serverless`  
 - **Protocoles :** `REST`, `GraphQL`
@@ -44,7 +44,7 @@ Ingénieur logiciel et développeur Full Stack basé à [Dakar](https://fr.wikip
 - **Containerisation :** `Docker`, `GitHub Codespaces`  
 - **Contrôle de version :** `Git`  
 - **CI/CD :** `GitHub Actions`, `GitLab CI`  
-- **Gestion de projet :** `Trello`, `GitHub Projects`, `Jira`  
+- **Gestion de projet :** `Trello`, `GitHub Projects`, `Jira`, `Slack`,
 - **Tests & Qualité :** `Postman`, `PHPUnit`, `Jest`
 
 ---
