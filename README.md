@@ -10,9 +10,9 @@
 
 ---
 
-#### 👋 Bonjour, je suis Limamou Laye aka Lims
+#### 👋 Bonjour, je suis Limamou Laye
 
-Ingénieur logiciel et développeur Full Stack basé à [Dakar](https://fr.wikipedia.org/wiki/Dakar), Sénégal. Spécialisé en développement web, à la conception d’architectures SaaS et passionné par la création de solutions innovantes, je travaille sur des projets en `PHP`, `Laravel`, `Node.js` et d'autres technologies pour concevoir des applications performantes.
+Ingénieur logiciel et développeur Full Stack basé à [Dakar](https://fr.wikipedia.org/wiki/Dakar), Sénégal. Spécialisé en développement web, à la conception d’architectures SaaS et passionné par la création de solutions innovantes.
 
 ---
 
@@ -28,8 +28,8 @@ Ingénieur logiciel et développeur Full Stack basé à [Dakar](https://fr.wikip
 #### 🚀 Mes Compétences
 
 **Backend:**  
-- **Langages :** `PHP`, `Python`, `Java`,`JavaScript`, `Node.js`
-- **Frameworks :** `Laravel`, `Django`, `SpringBoot`, `Express.js`, `Nest.js`
+- **Langages :** `PHP`, `Python`, `JavaScript`, `Node.js`
+- **Frameworks :** `Laravel`, `Django`, `Express.js`, `Nest.js`
 - **Bases de données :** `MySQL`, `PostgreSQL`, `MongoDB`  
 - **Architectures :** `Microservices`, `Client-Server`, `Serverless`  
 - **Protocoles :** `REST`, `GraphQL`
@@ -54,7 +54,10 @@ Ingénieur logiciel et développeur Full Stack basé à [Dakar](https://fr.wikip
 <a href="https://www.linkedin.com/in/limamou-laye">
   <img align="left" alt="LinkedIn" width="28px" src="./assets/linkedin.svg" />
 </a>
-<a href="mailto:limamoudotcom@gmail.com">
+<a href="https://www.medium.com/@seydinalimamoulayeyade">
+  <img align="left" alt="Email" width="28px" src="./assets/medium.svg" />
+</a>
+<a href="mailto:seydinalimamoulayeyade@gmail.com">
   <img align="left" alt="Email" width="28px" src="./assets/gmail.svg" />
 </a>
 
