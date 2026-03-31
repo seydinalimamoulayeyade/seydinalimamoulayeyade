@@ -1,81 +1,86 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/seydavina/seydavina/main/assets/name.svg" alt="Limamou Laye" />
+  <img src="https://raw.githubusercontent.com/seydavina/seydavina/main/assets/name.svg" alt="Seydina Limamou Laye YADE" />
 </h1>
+<h2 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=35&duration=3000&color=00F7FF&center=true&vCenter=true&width=600&lines=Seydina+Limamou+Laye+YADE;Cloud+%7C+DevOps+Engineer;FullStack+Developer;AWS+Enthusiast+☁️🚀" />
+</h2>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Software_Engineer-Junior-blue?style=for-the-badge" alt="Software Engineer Badge"/>
-  <img src="https://img.shields.io/badge/FullStack-Developer-green?style=for-the-badge" alt="FullStack Developer Badge"/>
-  <img src="https://img.shields.io/badge/Based_in-Dakar-orange?style=for-the-badge" alt="Based in Dakar"/>
+  <img src="https://img.shields.io/badge/Cloud-AWS-orange?style=for-the-badge&logo=amazonaws&logoColor=white"/>
+  <img src="https://img.shields.io/badge/DevOps-Engineer-blue?style=for-the-badge&logo=azuredevops&logoColor=white"/>
+  <img src="https://img.shields.io/badge/FullStack-Developer-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Based_in-Dakar-ff69b4?style=for-the-badge"/>
 </p>
 
 ---
 
-#### 👋 Bonjour, je suis Limamou Laye
+## 👋 À propos de moi
 
-Ingénieur logiciel et développeur Full Stack basé à [Dakar](https://fr.wikipedia.org/wiki/Dakar), Sénégal. Spécialisé en développement web, à la conception d’architectures SaaS et passionné par la création de solutions innovantes.
-
----
-
-#### 🔥 Ce que je fais
-
-- Développement d'applications web et d'API robustes.
-- Conception d'architectures microservices et serverless.
-- Contribution à des projets open source.
-- Partage de connaissances à travers mon blog et mes contributions sur GitHub.
+💡 Ingénieur logiciel passionné par le **Cloud Computing ☁️ et le DevOps ⚙️**  
+📍 Basé à Dakar, Sénégal  
+🎯 Objectif : Concevoir des infrastructures scalables et automatisées  
 
 ---
 
-#### 🚀 Mes Compétences
+## 🔥 Ce que je fais actuellement
 
-**Backend:**  
-- **Langages :** `PHP`, `Python`, `JavaScript`, `Node.js`
-- **Frameworks :** `Laravel`, `Django`, `Express.js`, `Nest.js`
-- **Bases de données :** `MySQL`, `PostgreSQL`, `MongoDB`  
-- **Architectures :** `Microservices`, `Client-Server`, `Serverless`  
-- **Protocoles :** `REST`, `GraphQL`
-
-**Frontend:** *(pour le plaisir)*  
-- **Langages :** `JavaScript`, `TypeScript`  
-- **Frameworks / Bibliothèques :** `Vue.js`, `React.js`, `Angular`  
-- **UI Toolkits :** `shadcn/ui`, `Chakra UI`  
-- **Outils :** `Tailwind CSS`, `Bootstrap`
-
-**Écosystème & Outils :**  
-- **Containerisation :** `Docker`, `GitHub Codespaces`  
-- **Contrôle de version :** `Git`  
-- **CI/CD :** `GitHub Actions`, `GitLab CI`  
-- **Gestion de projet :** `Trello`, `GitHub Projects`, `Jira`, `Slack`,
-- **Tests & Qualité :** `Postman`, `PHPUnit`, `Jest`
+🚀 Construction d'architectures **Cloud AWS & DevOps**  
+⚙️ Mise en place de pipelines **CI/CD performants**  
+🐳 Containerisation et orchestration avec Docker  
+📦 Développement d'APIs robustes et scalables  
 
 ---
 
-#### 📫 Me contacter
+## 🧠 Stack Cloud & DevOps
 
-<a href="https://www.linkedin.com/in/limamou-laye">
-  <img align="left" alt="LinkedIn" width="28px" src="./assets/linkedin.svg" />
-</a>
-<a href="https://www.medium.com/@seydinalimamoulayeyade">
-  <img align="left" alt="Email" width="28px" src="./assets/medium.svg" />
-</a>
-<a href="mailto:seydinalimamoulayeyade@gmail.com">
-  <img align="left" alt="Email" width="28px" src="./assets/gmail.svg" />
-</a>
-
-<br/><br/><br/>
-
----
-
-<p align="center"> 
-  <a href="http://www.github.com/seydinalimamoulayeyade">
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=seydinalimamoulayeyade&theme=algolia" />
-  </a> 
-  <a href="http://www.github.com/seydinalimamoulayeyade">
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=seydinalimamoulayeyade&theme=algolia" />
-  </a> 
-  <a href="http://www.github.com/seydinalimamoulayeyade">
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=seydinalimamoulayeyade&theme=algolia" />
-  </a>  
-  <!-- <a href="http://www.github.com/seydinalimamoulayeyade">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=seydinalimamoulayeyade&theme=react-dark&hide_border=true&hide_title=false&area=true&custom_title=Contributions" alt="Contributions Graph" />
-  </a>  -->
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=aws,docker,kubernetes,linux,git,githubactions,nginx" />
 </p>
+
+---
+
+## 💻 Stack Développement
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=php,laravel,python,nodejs,vue,react,tailwind,mysql,postgres,mongodb" />
+</p>
+
+---
+
+## 🏗️ Architecture & Concepts
+
+✔️ Microservices  
+✔️ Serverless  
+✔️ CI/CD  
+✔️ Infrastructure as Code (IaC)  
+✔️ REST & GraphQL  
+
+---
+
+## 📈 Activité
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=seydinalimamoulayeyade&theme=react-dark&hide_border=true&area=true"/>
+</p>
+
+---
+
+## 🌍 Me contacter
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/limamou-laye">
+    <img src="https://skillicons.dev/icons?i=linkedin" height="40"/>
+  </a>
+  <a href="https://www.medium.com/@seydinalimamoulayeyade">
+    <img src="https://skillicons.dev/icons?i=devto" height="40"/>
+  </a>
+  <a href="mailto:seydinalimamoulayeyade@gmail.com">
+    <img src="https://skillicons.dev/icons?i=gmail" height="40"/>
+  </a>
+</p>
+
+---
+
+## ⚡ Fun Fact
+
+💭 “Automatiser aujourd’hui, c’est gagner du temps pour demain.”
