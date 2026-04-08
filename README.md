@@ -2,13 +2,13 @@
   <img src="https://raw.githubusercontent.com/seydavina/seydavina/main/assets/name.svg" alt="Seydina Limamou Laye YADE" />
 </h1>
 <h2 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=35&duration=3000&color=00F7FF&center=true&vCenter=true&width=600&lines=Seydina+Limamou+Laye+YADE;Cloud+%7C+DevOps+Engineer;FullStack+Developer;AWS+Enthusiast+☁️🚀" />
+  <img src="https://readme-typing-svg.herokuapp.com?size=35&duration=3000&color=5C6AC4&center=true&vCenter=true&width=600&lines=Seydina+Limamou+Laye+YADE;Cloud+%7C+DevOps+Engineer;Backend+Developer;AWS+Enthusiast+☁️🚀" />
 </h2>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Cloud-AWS-orange?style=for-the-badge&logo=amazonaws&logoColor=white"/>
   <img src="https://img.shields.io/badge/DevOps-Engineer-blue?style=for-the-badge&logo=azuredevops&logoColor=white"/>
-  <img src="https://img.shields.io/badge/FullStack-Developer-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Backend-Developer-green?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Based_in-Dakar-ff69b4?style=for-the-badge"/>
 </p>
 
