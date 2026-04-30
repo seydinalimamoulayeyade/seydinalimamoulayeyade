@@ -1,9 +1,7 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/seydavina/seydavina/main/assets/name.svg" alt="Seydina Limamou Laye YADE" />
+  <img src="./assets/name.svg" alt="Seydina Limamou Laye YADE" />
 </h1>
-<h2 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=35&duration=3000&color=5C6AC4&center=true&vCenter=true&width=600&lines=Seydina+Limamou+Laye+YADE;Cloud+%7C+DevOps+Engineer;Backend+Developer;AWS+Enthusiast+☁️🚀" />
-</h2>
+<p align="center"><strong>Cloud | DevOps Engineer · Backend Developer · AWS Enthusiast ☁️🚀</strong></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Cloud-AWS-orange?style=for-the-badge&logo=amazonaws&logoColor=white"/>
@@ -33,17 +31,13 @@
 
 ## 🧠 Stack Cloud & DevOps
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=aws,docker,kubernetes,linux,git,githubactions,nginx" />
-</p>
+- AWS, Docker, Kubernetes, Linux, Git, GitHub Actions, Nginx
 
 ---
 
 ## 💻 Stack Développement
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=php,laravel,python,nodejs,vue,react,tailwind,mysql,postgres,mongodb" />
-</p>
+- PHP, Laravel, Python, Node.js, Vue, React, Tailwind CSS, MySQL, PostgreSQL, MongoDB
 
 ---
 
@@ -60,7 +54,7 @@
 ## 📈 Activité
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=seydinalimamoulayeyade&theme=react-dark&hide_border=true&area=true"/>
+  <img src="./assets/preview.gif" alt="Aperçu de l'activité"/>
 </p>
 
 ---
@@ -69,13 +63,13 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/limamou-laye">
-    <img src="https://skillicons.dev/icons?i=linkedin" height="40"/>
+    <img src="./assets/linkedin.svg" height="40" alt="LinkedIn"/>
   </a>
   <a href="https://www.medium.com/@seydinalimamoulayeyade">
-    <img src="https://skillicons.dev/icons?i=devto" height="40"/>
+    <img src="./assets/medium.svg" height="40" alt="Medium"/>
   </a>
   <a href="mailto:seydinalimamoulayeyade@gmail.com">
-    <img src="https://skillicons.dev/icons?i=gmail" height="40"/>
+    <img src="./assets/gmail.svg" height="40" alt="Gmail"/>
   </a>
 </p>
 
