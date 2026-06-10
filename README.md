@@ -1,6 +1,12 @@
 <div align="center">
 
-# 🌍 SEYDINA — Virtual Voyager
+```
+   _____    ________  __    ____     ____    _   __    ___ 
+  / ___/   / ____/\ \/ /   / __ \   /  _/   / | / /   /   |
+  \__ \   / __/    \  /   / / / /   / /    /  |/ /   / /| |
+ ___/ /  / /___    / /   / /_/ /  _/ /    / /|  /   / ___ |
+/____/  /_____/   /_/   /_____/  /___/   /_/ |_/   /_/  |_|
+```
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&duration=3000&pause=800&color=1D9E75&center=true&vCenter=true&width=620&lines=Cloud+%26+DevOps+Engineer+%F0%9F%9A%80;aka+Virtual+Voyager+%F0%9F%8C%8D;Building+in+public+%E2%80%94+one+pipeline+at+a+time;Dakar%2C+S%C3%A9n%C3%A9gal+%F0%9F%87%B8%F0%9F%87%B3;Automate+everything.+Ship+things+that+matter.)](https://github.com/seydinalimamoulayeyade)
 
@@ -55,8 +61,8 @@ $ cat stack.json | jq .
 {
   "cloud"    : ["AWS — EC2, S3, VPC, ALB, IAM, CloudFront, Auto Scaling"],
   "devops"   : ["Docker", "Docker Compose", "Jenkins", "GitHub Actions", "Nginx"],
-  "deploy"   : ["Node.js", "NestJS", "PHP/Laravel", "React", "Vue.js — apps I containerize & ship"],
-  "data"     : ["PostgreSQL", "MongoDB", "JWT/RBAC"],
+  "backend"  : ["Node.js", "NestJS", "PHP/Laravel", "PostgreSQL", "MongoDB", "JWT/RBAC"],
+  "frontend" : ["React", "Vue.js", "Tailwind CSS", "Vite"],
   "os"       : ["Linux Ubuntu", "Bash scripting"],
   "next"     : ["Kubernetes", "Terraform", "SonarQube", "Prometheus/Grafana", "Trivy"]
 }
@@ -92,45 +98,15 @@ $ git log --oneline --graph
 ---
 
 ```bash
-$ ls -l ~/current-projects/
-```
-```
-total 3
-drwxr-xr-x  jenkins-ci-cd-pipeline    → Module 3 — CI/CD automation in progress 🔄
-drwxr-xr-x  aws-clf-c02-labs          → Certification prep + hands-on labs ☁️
-drwxr-xr-x  docker-mastery            → Module 2 — multi-stage builds ✅
-
-📌 Pinned repositories below — each one is a piece of the pipeline.
-   github.com/seydinalimamoulayeyade
-```
-
----
-
-```bash
-$ tail -f /var/log/learning.log
-```
-```
-[2026-06-10] ✅ Docker Compose multi-stage builds — mastered
-[2026-06-08] 🔄 Jenkins declarative pipeline — first successful build
-[2026-06-05] 📖 AWS VPC + Subnets — clarity achieved
-[2026-06-02] 🚀 Nginx reverse proxy + SSL — deployed on EC2
-[2026-05-28] 🐳 First Dockerized app pushed to Docker Hub
-```
-
----
-
-```bash
 $ echo $VISION
 ```
 ```
 "Automatiser aujourd'hui, c'est gagner du temps pour demain —
  et construire des systèmes qui tiennent quand tu dors."
 
-  Roadmap 2026 :
-  → AWS CLF-C02 certification (Q3 2026)
-  → Kubernetes + Terraform mastery (Q4 2026)
-  → Deploy a cloud-native app in production on AWS (end 2026)
-  → Contribute to open-source DevOps projects
+  → AWS CLF-C02 certification
+  → Kubernetes & Terraform mastery
+  → Cloud-native architectures en production
 ```
 
 ---
@@ -140,24 +116,11 @@ $ cat ~/.ssh/contact.pub
 ```
 ```
   ──────────────────────────────────────────────
-  linkedin  →  https://linkedin.com/in/limamou-laye
-  github    →  https://github.com/seydinalimamoulayeyade
-  dockerhub →  https://hub.docker.com/u/lims4
+  linkedin  →  linkedin.com/in/limamou-laye
+  github    →  github.com/seydinalimamoulayeyade
+  dockerhub →  hub.docker.com/u/lims4
   email     →  seydinalimamoulayeyade@gmail.com
   ──────────────────────────────────────────────
-```
-
----
-
-```bash
-$ cat ~/looking-for.txt
-```
-```
-Open to collaborate on:
-  → Open-source DevOps projects
-  → CI/CD pipeline reviews & improvements
-  → AWS architecture discussions
-  → Knowledge sharing — je partage ce que j'apprends !
 ```
 
 ---
