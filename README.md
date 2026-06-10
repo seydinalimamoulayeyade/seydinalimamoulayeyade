@@ -8,7 +8,7 @@
 /____/  /_____/   /_/   /_____/  /___/   /_/ |_/   /_/  |_|
 ```
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&duration=3000&pause=800&color=1D9E75&center=true&vCenter=true&width=600&lines=Cloud+%26+DevOps+Engineer+%F0%9F%9A%80;aka+Virtual+Voyager+%F0%9F%8C%8D;Building+in+public+%E2%80%94+one+pipeline+at+a+time;Dakar%2C+S%C3%A9n%C3%A9gal+%F0%9F%87%B8%F0%9F%87%B3;Automate+everything.+Ship+things+that+matter.)](https://github.com/seydinalimamoulayeyade)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&duration=3000&pause=800&color=1D9E75&center=true&vCenter=true&width=620&lines=Cloud+%26+DevOps+Engineer+%F0%9F%9A%80;aka+Virtual+Voyager+%F0%9F%8C%8D;Building+in+public+%E2%80%94+one+pipeline+at+a+time;Dakar%2C+S%C3%A9n%C3%A9gal+%F0%9F%87%B8%F0%9F%87%B3;Automate+everything.+Ship+things+that+matter.)](https://github.com/seydinalimamoulayeyade)
 
 </div>
 
@@ -31,18 +31,26 @@ seydinalimamoulayeyade  [ aka Virtual Voyager 🌍 ]
 ```bash
 $ cat /etc/devops-toolchain
 ```
-```
-TOOL               STATUS          MODULE
-────────────────────────────────────────────────────
-Docker             ██████████  ✅  done
-Jenkins            ████████░░  🔄  in progress
-SonarQube          ██░░░░░░░░  📍  next
-Kubernetes         ░░░░░░░░░░  ⏳  pending
-Terraform          ░░░░░░░░░░  ⏳  pending
-Prometheus/Grafana ░░░░░░░░░░  ⏳  pending
-Trivy              ░░░░░░░░░░  ⏳  pending
-AI for DevOps      ░░░░░░░░░░  🔮  incoming
-```
+
+<div align="center">
+
+<!-- Row 1 : done -->
+![Docker](https://img.shields.io/badge/Docker-✅_done-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-🔄_in_progress-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
+
+<!-- Row 2 : next -->
+![SonarQube](https://img.shields.io/badge/SonarQube-📍_next-4E9BCD?style=for-the-badge&logo=sonarqube&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-⏳_pending-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+
+<!-- Row 3 : pending -->
+![Terraform](https://img.shields.io/badge/Terraform-⏳_pending-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus%2FGrafana-⏳_pending-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+
+<!-- Row 4 : incoming -->
+![Trivy](https://img.shields.io/badge/Trivy-⏳_pending-1904DA?style=for-the-badge&logo=aquasecurity&logoColor=white)
+![AI DevOps](https://img.shields.io/badge/AI_for_DevOps-🔮_incoming-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white)
+
+</div>
 
 ---
 
@@ -118,6 +126,9 @@ $ cat ~/.ssh/contact.pub
 ---
 
 <div align="center">
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=seydinalimamoulayeyade&show_icons=true&theme=react&hide_border=true&title_color=1D9E75&icon_color=1D9E75&text_color=D3D1C7&bg_color=191917)](https://github.com/seydinalimamoulayeyade)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=seydinalimamoulayeyade&layout=compact&theme=react&hide_border=true&title_color=1D9E75&text_color=D3D1C7&bg_color=191917)](https://github.com/seydinalimamoulayeyade)
 
 ![GitHub Activity](https://github-readme-activity-graph.vercel.app/graph?username=seydinalimamoulayeyade&theme=react-dark&hide_border=true&area=true&color=1D9E75&line=1D9E75&point=ffffff)
 
