@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Voyager — Seydina Limamou Laye Yade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #0F0F0D;
+      --bg2:       #191917;
+      --bg3:       #222220;
+      --border:    #2E2E2B;
+      --border2:   #3A3A37;
+      --green:     #1D9E75;
+      --green-dim: #165F47;
+      --blue:      #378ADD;
+      --purple:    #7F77DD;
+      --amber:     #EF9F27;
+      --teal:      #5DCAA5;
+      --white:     #D3D1C7;
+      --dim:       #5F5E5A;
+      --dim2:      #3A3A37;
+      --font-mono: 'Fira Code', monospace;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-mono);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── SCANLINE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.04) 2px,
+        rgba(0,0,0,0.04) 4px
+      );
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* ── WINDOW CHROME ── */
+    .window {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.03), 0 32px 64px rgba(0,0,0,0.6);
+    }
+
+    .window-bar {
+      background: #272725;
+      border-bottom: 1px solid var(--border);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-r { background: #E24B4A; }
+    .dot-y { background: #EF9F27; }
+    .dot-g { background: #639922; }
+    .window-title {
+      flex: 1;
+      text-align: center;
+      font-size: 11px;
+      color: var(--dim);
+      letter-spacing: 0.05em;
+    }
+
+    .window-body { padding: 2.5rem 2.5rem 2rem; }
+
+    /* ── ASCII HEADER ── */
+    .ascii-header {
+      text-align: center;
+      margin-bottom: 1.25rem;
+      overflow-x: auto;
+    }
+    .ascii-header pre {
+      font-size: clamp(6px, 1.4vw, 10px);
+      line-height: 1.3;
+      color: var(--blue);
+      display: inline-block;
+      text-align: left;
+    }
+
+    /* ── TYPING ANIMATION ── */
+    .typing-line {
+      text-align: center;
+      margin-bottom: 2rem;
+      min-height: 24px;
+      font-size: 14px;
+      color: var(--green);
+      letter-spacing: 0.02em;
+    }
+    .cursor {
+      display: inline-block;
+      width: 9px;
+      height: 16px;
+      background: var(--green);
+      vertical-align: middle;
+      margin-left: 2px;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* ── SEPARATOR ── */
+    .sep {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ── PROMPT ── */
+    .prompt {
+      font-size: 13px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .prompt-user  { color: var(--teal); }
+    .prompt-at    { color: var(--dim); }
+    .prompt-host  { color: var(--purple); }
+    .prompt-path  { color: var(--dim); }
+    .prompt-dollar { color: var(--green); margin: 0 6px; }
+    .prompt-cmd   { color: var(--white); }
+
+    /* ── CODE BLOCK ── */
+    .block {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 18px;
+      font-size: 12.5px;
+      line-height: 1.75;
+      overflow-x: auto;
+    }
+    .block .key   { color: var(--purple); }
+    .block .val   { color: var(--white); }
+    .block .str   { color: var(--teal); }
+    .block .dim   { color: var(--dim); }
+    .block .green { color: var(--green); }
+    .block .blue  { color: var(--blue); }
+    .block .amber { color: var(--amber); }
+    .block .vv    { color: var(--purple); font-weight: 600; }
+    .block .wip   { color: var(--blue); }
+    .block .next  { color: var(--amber); }
+
+    /* ── TOOLCHAIN GRID ── */
+    .toolchain {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 8px;
+      margin-top: 2px;
+    }
+    .tool-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: border-color 0.2s;
+    }
+    .tool-item:hover { border-color: var(--border2); }
+    .tool-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .tool-info { flex: 1; min-width: 0; }
+    .tool-name {
+      font-size: 12px;
+      color: var(--white);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .tool-bar-wrap {
+      height: 3px;
+      background: var(--border);
+      border-radius: 2px;
+      margin-top: 5px;
+      overflow: hidden;
+    }
+    .tool-bar-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 1.2s cubic-bezier(.4,0,.2,1);
+    }
+    .tool-status {
+      font-size: 10px;
+      margin-top: 3px;
+    }
+
+    /* ── STACK PILLS ── */
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 2px;
+    }
+    .pill {
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--border2);
+      color: var(--dim);
+      font-family: var(--font-mono);
+    }
+    .pill.cloud  { color: #85B7EB; border-color: #1a3a5c; background: rgba(55,138,221,0.08); }
+    .pill.devops { color: #5DCAA5; border-color: #0f3d2e; background: rgba(29,158,117,0.08); }
+    .pill.back   { color: #D3D1C7; border-color: var(--border2); }
+    .pill.front  { color: #AFA9EC; border-color: #2a2750; background: rgba(127,119,221,0.08); }
+    .pill.os     { color: #97C459; border-color: #1e3010; background: rgba(151,196,89,0.08); }
+    .pill.next   { color: var(--amber); border-color: #3d2800; background: rgba(239,159,39,0.07); }
+
+    /* ── VISION BLOCK ── */
+    .vision-quote {
+      font-size: 14px;
+      color: var(--teal);
+      line-height: 1.8;
+      border-left: 2px solid var(--green);
+      padding-left: 16px;
+      margin-bottom: 14px;
+    }
+    .vision-goals { display: flex; flex-direction: column; gap: 6px; }
+    .vision-goal {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--white);
+    }
+    .vision-goal .arrow { color: var(--green); }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 8px;
+    }
+    .contact-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .contact-item:hover {
+      border-color: var(--green-dim);
+      background: rgba(29,158,117,0.06);
+    }
+    .contact-icon { font-size: 16px; flex-shrink: 0; }
+    .contact-label { font-size: 10px; color: var(--dim); font-family: var(--font-sans); }
+    .contact-val   { font-size: 12px; color: var(--white); font-family: var(--font-mono); }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 11px;
+      color: var(--dim);
+    }
+    .footer .vv { color: var(--purple); }
+
+    /* ── SECTION SPACING ── */
+    .section { margin-bottom: 4px; }
+
+    /* ── GLOW PULSE on ascii ── */
+    @keyframes glow-pulse {
+      0%, 100% { text-shadow: 0 0 8px rgba(55,138,221,0.3); }
+      50%       { text-shadow: 0 0 18px rgba(55,138,221,0.6); }
+    }
+    .ascii-header pre { animation: glow-pulse 4s ease-in-out infinite; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .container { padding: 1rem 0.75rem 3rem; }
+      .window-body { padding: 1.5rem 1.25rem 1.25rem; }
+      .toolchain { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="window">
+    <div class="window-bar">
+      <div class="dot dot-r"></div>
+      <div class="dot dot-y"></div>
+      <div class="dot dot-g"></div>
+      <div class="window-title">seydinalimamoulayeyade — ~/ — bash</div>
+    </div>
+
+    <div class="window-body">
+
+      <!-- ASCII -->
+      <div class="ascii-header">
+        <pre>   _____    ________  __    ____     ____    _   __    ___
+  / ___/   / ____/\ \/ /   / __ \   /  _/   / | / /   /   |
+  \__ \   / __/    \  /   / / / /   / /    /  |/ /   / /| |
+ ___/ /  / /___    / /   / /_/ /  _/ /    / /|  /   / ___ |
+/____/  /_____/   /_/   /_____/  /___/   /_/ |_/   /_/  |_|</pre>
+      </div>
+
+      <!-- Typing -->
+      <div class="typing-line">
+        <span id="typing-text"></span><span class="cursor"></span>
+      </div>
+
+      <hr class="sep" />
+
+      <!-- whoami -->
+      <div class="section">
+        <div class="prompt">
+          <span class="prompt-user">seydina</span>
+          <span class="prompt-at">@</span>
+          <span class="prompt-host">github</span>
+          <span class="prompt-path">:~$</span>
+          <span class="prompt-dollar"></span>
+          <span class="prompt-cmd">whoami</span>
+        </div>
+        <div class="block">
+          <span class="val">seydinalimamoulayeyade</span>&nbsp;&nbsp;<span class="dim">[</span> aka <span class="vv">Virtual Voyager 🌍</span> <span class="dim">]</span><br/>
+          <span class="dim">├──</span> <span class="key">role</span>     <span class="dim">:</span> <span class="val">Cloud &amp; DevOps Engineer (in progress)</span><br/>
+          <span class="dim">├──</span> <span class="key">location</span> <span class="dim">:</span> <span class="val">Dakar, Sénégal 🇸🇳</span><br/>
+          <span class="dim">├──</span> <span class="key">training</span> <span class="dim">:</span> <span class="val">AWS &amp; DevOps @ Orange Digital Center</span><br/>
+          <span class="dim">├──</span> <span class="key">status</span>   <span class="dim">:</span> <span class="green">Building in public ⚡</span><br/>
+          <span class="dim">└──</span> <span class="key">goal</span>     <span class="dim">:</span> <span class="amber">Concevoir des infrastructures qui tournent quand je dors.</span>
+        </div>
+      </div>
+
+      <hr class="sep" />
+
+      <!-- toolchain -->
+      <div class="section">
+        <div class="prompt">
+          <span class="prompt-user">seydina</span><span class="prompt-at">@</span><span class="prompt-host">github</span>
+          <span class="prompt-path">:~$</span>
+          <span class="prompt-cmd">cat /etc/devops-toolchain</span>
+        </div>
+        <div class="toolchain" id="toolchain"></div>
+      </div>
+
+      <hr class="sep" />
+
+      <!-- stack -->
+      <div class="section">
+        <div class="prompt">
+          <span class="prompt-user">seydina</span><span class="prompt-at">@</span><span class="prompt-host">github</span>
+          <span class="prompt-path">:~$</span>
+          <span class="prompt-cmd">cat stack.json | jq .</span>
+        </div>
+        <div class="block">
+          <span class="dim">{</span><br/>
+          &nbsp;&nbsp;<span class="key">"cloud"</span>    <span class="dim">:</span> <div class="pills" style="display:inline-flex;margin-left:4px;">
+            <span class="pill cloud">EC2</span><span class="pill cloud">S3</span><span class="pill cloud">VPC</span><span class="pill cloud">ALB</span><span class="pill cloud">IAM</span><span class="pill cloud">CloudFront</span><span class="pill cloud">Auto Scaling</span>
+          </div><br/>
+          &nbsp;&nbsp;<span class="key">"devops"</span>   <span class="dim">:</span> <div class="pills" style="display:inline-flex;margin-left:4px;">
+            <span class="pill devops">Docker</span><span class="pill devops">Jenkins</span><span class="pill devops">GitHub Actions</span><span class="pill devops">Nginx</span>
+          </div><br/>
+          &nbsp;&nbsp;<span class="key">"backend"</span>  <span class="dim">:</span> <div class="pills" style="display:inline-flex;margin-left:4px;">
+            <span class="pill back">Node.js</span><span class="pill back">NestJS</span><span class="pill back">PHP/Laravel</span><span class="pill back">PostgreSQL</span><span class="pill back">MongoDB</span>
+          </div><br/>
+          &nbsp;&nbsp;<span class="key">"frontend"</span> <span class="dim">:</span> <div class="pills" style="display:inline-flex;margin-left:4px;">
+            <span class="pill front">React</span><span class="pill front">Vue.js</span><span class="pill front">Tailwind</span><span class="pill front">Vite</span>
+          </div><br/>
+          &nbsp;&nbsp;<span class="key">"os"</span>       <span class="dim">:</span> <div class="pills" style="display:inline-flex;margin-left:4px;">
+            <span class="pill os">Linux Ubuntu</span><span class="pill os">Bash</span>
+          </div><br/>
+          &nbsp;&nbsp;<span class="key">"next"</span>     <span class="dim">:</span> <div class="pills" style="display:inline-flex;margin-left:4px;">
+            <span class="pill next">Kubernetes</span><span class="pill next">Terraform</span><span class="pill next">SonarQube</span><span class="pill next">Prometheus</span><span class="pill next">Trivy</span>
+          </div><br/>
+          <span class="dim">}</span>
+        </div>
+      </div>
+
+      <hr class="sep" />
+
+      <!-- git log -->
+      <div class="section">
+        <div class="prompt">
+          <span class="prompt-user">seydina</span><span class="prompt-at">@</span><span class="prompt-host">github</span>
+          <span class="prompt-path">:~$</span>
+          <span class="prompt-cmd">git log --oneline --graph</span>
+        </div>
+        <div class="block">
+          <span class="dim">─── Explore pinned repositories below ↓</span><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="val">Each one is a piece of the pipeline.</span><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="dim">From commit</span> <span class="green">→</span> <span class="blue">build</span> <span class="green">→</span> <span class="str">ship.</span><br/><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/seydinalimamoulayeyade" style="color:var(--blue);text-decoration:none;">github.com/seydinalimamoulayeyade</a>
+        </div>
+      </div>
+
+      <hr class="sep" />
+
+      <!-- vision -->
+      <div class="section">
+        <div class="prompt">
+          <span class="prompt-user">seydina</span><span class="prompt-at">@</span><span class="prompt-host">github</span>
+          <span class="prompt-path">:~$</span>
+          <span class="prompt-cmd">echo $VISION</span>
+        </div>
+        <div class="block">
+          <div class="vision-quote">
+            "Automatiser aujourd'hui, c'est gagner du temps pour demain —<br/>
+            &nbsp;et construire des systèmes qui tiennent quand tu dors."
+          </div>
+          <div class="vision-goals">
+            <div class="vision-goal"><span class="arrow">→</span> AWS CLF-C02 certification</div>
+            <div class="vision-goal"><span class="arrow">→</span> Kubernetes &amp; Terraform mastery</div>
+            <div class="vision-goal"><span class="arrow">→</span> Cloud-native architectures en production</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sep" />
+
+      <!-- contact -->
+      <div class="section">
+        <div class="prompt">
+          <span class="prompt-user">seydina</span><span class="prompt-at">@</span><span class="prompt-host">github</span>
+          <span class="prompt-path">:~$</span>
+          <span class="prompt-cmd">cat ~/.ssh/contact.pub</span>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-item" href="https://linkedin.com/in/limamou-laye" target="_blank" rel="noopener">
+            <span class="contact-icon">💼</span>
+            <div><div class="contact-label">LinkedIn</div><div class="contact-val">limamou-laye</div></div>
+          </a>
+          <a class="contact-item" href="https://github.com/seydinalimamoulayeyade" target="_blank" rel="noopener">
+            <span class="contact-icon">🐙</span>
+            <div><div class="contact-label">GitHub</div><div class="contact-val">seydinalimamoulayeyade</div></div>
+          </a>
+          <a class="contact-item" href="https://hub.docker.com/u/lims4" target="_blank" rel="noopener">
+            <span class="contact-icon">🐳</span>
+            <div><div class="contact-label">Docker Hub</div><div class="contact-val">lims4</div></div>
+          </a>
+          <a class="contact-item" href="mailto:seydinalimamoulayeyade@gmail.com">
+            <span class="contact-icon">✉️</span>
+            <div><div class="contact-label">Email</div><div class="contact-val">seydinalimamoulayeyade</div></div>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /window-body -->
+  </div><!-- /window -->
+
+  <div class="footer">
+    <code>index.html</code> — written in bash, curiosity &amp; too much coffee ☕ · <span class="vv">Virtual Voyager 🌍</span>
+  </div>
+</div>
+
+<script>
+  /* ── TYPING ANIMATION ── */
+  const lines = [
+    "Cloud & DevOps Engineer 🚀",
+    "aka Virtual Voyager 🌍",
+    "Building in public — one pipeline at a time",
+    "Dakar, Sénégal 🇸🇳",
+    "Automate everything. Ship things that matter."
+  ];
+  let li = 0, ci = 0, deleting = false;
+  const el = document.getElementById('typing-text');
+  function type() {
+    const cur = lines[li];
+    if (!deleting) {
+      el.textContent = cur.slice(0, ++ci);
+      if (ci === cur.length) { deleting = true; setTimeout(type, 2200); return; }
+    } else {
+      el.textContent = cur.slice(0, --ci);
+      if (ci === 0) { deleting = false; li = (li + 1) % lines.length; }
+    }
+    setTimeout(type, deleting ? 25 : 60);
+  }
+  type();
+
+  /* ── TOOLCHAIN ── */
+  const tools = [
+    { name: 'Docker',              icon: '🐳', color: '#2496ED', bg: 'rgba(36,150,237,0.12)', pct: 95,  label: '✅ done',        cls: 'green' },
+    { name: 'Jenkins',             icon: '⚙️',  color: '#D24939', bg: 'rgba(210,73,57,0.12)',  pct: 65,  label: '🔄 in progress', cls: 'wip'   },
+    { name: 'SonarQube',           icon: '🔍', color: '#4E9BCD', bg: 'rgba(78,155,205,0.12)', pct: 10,  label: '📍 next',        cls: 'next'  },
+    { name: 'Kubernetes',          icon: '☸️',  color: '#326CE5', bg: 'rgba(50,108,229,0.12)', pct: 0,   label: '⏳ pending',     cls: 'dim'   },
+    { name: 'Terraform',           icon: '🏗️', color: '#7B42BC', bg: 'rgba(123,66,188,0.12)', pct: 0,   label: '⏳ pending',     cls: 'dim'   },
+    { name: 'Prometheus / Grafana',icon: '📊', color: '#E6522C', bg: 'rgba(230,82,44,0.12)',  pct: 0,   label: '⏳ pending',     cls: 'dim'   },
+    { name: 'Trivy',               icon: '🛡️', color: '#1904DA', bg: 'rgba(25,4,218,0.12)',   pct: 0,   label: '⏳ pending',     cls: 'dim'   },
+    { name: 'AI for DevOps',       icon: '🔮', color: '#8A2BE2', bg: 'rgba(138,43,226,0.12)', pct: 0,   label: '🔮 incoming',    cls: 'purple'},
+  ];
+
+  const colorMap = { green: '#1D9E75', wip: '#378ADD', next: '#EF9F27', dim: '#5F5E5A', purple: '#AFA9EC' };
+
+  const grid = document.getElementById('toolchain');
+  tools.forEach((t, i) => {
+    const item = document.createElement('div');
+    item.className = 'tool-item';
+    item.innerHTML = `
+      <div class="tool-icon" style="background:${t.bg};">${t.icon}</div>
+      <div class="tool-info">
+        <div class="tool-name">${t.name}</div>
+        <div class="tool-bar-wrap">
+          <div class="tool-bar-fill" id="bar-${i}" style="width:0%;background:${t.color};"></div>
+        </div>
+        <div class="tool-status" style="color:${colorMap[t.cls] || '#5F5E5A'};">${t.label}</div>
+      </div>`;
+    grid.appendChild(item);
+    // Animate bars on load with stagger
+    setTimeout(() => {
+      document.getElementById(`bar-${i}`).style.width = t.pct + '%';
+    }, 300 + i * 120);
+  });
+</script>
+</body>
+</html>
