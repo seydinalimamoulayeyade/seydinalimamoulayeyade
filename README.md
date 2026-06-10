@@ -8,11 +8,11 @@
 /____/  /_____/   /_/   /_____/  /___/   /_/ |_/   /_/  |_|
 ```
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&duration=3000&pause=800&color=1D9E75&center=true&vCenter=true&width=620&lines=Cloud+%26+DevOps+Engineer+%F0%9F%9A%80;aka+Virtual+Voyager+%F0%9F%8C%8D;Building+in+public+%E2%80%94+one+pipeline+at+a+time;Dakar%2C+S%C3%A9n%C3%A9gal+%F0%9F%87%B8%F0%9F%87%B3;Automate+everything.+Ship+things+that+matter.)](https://seydinalimamoulayeyade.github.io)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&duration=3000&pause=800&color=1D9E75&center=true&vCenter=true&width=620&lines=Cloud+%26+DevOps+Engineer+%F0%9F%9A%80;aka+Virtual+Voyager+%F0%9F%8C%8D;Building+in+public+%E2%80%94+one+pipeline+at+a+time;Dakar%2C+S%C3%A9n%C3%A9gal+%F0%9F%87%B8%F0%9F%87%B3;Automate+everything.+Ship+things+that+matter.)](https://seydinalimamoulayeyade.github.io/seydinalimamoulayeyade)
 
 ---
 
-[![View full terminal profile →](https://img.shields.io/badge/View_full_terminal_profile_%E2%86%92-1D9E75?style=for-the-badge&logo=gnometerminal&logoColor=white)](https://seydinalimamoulayeyade.github.io)
+[![View full terminal profile →](https://img.shields.io/badge/View_full_terminal_profile_%E2%86%92-1D9E75?style=for-the-badge&logo=gnometerminal&logoColor=white)](https://seydinalimamoulayeyade.github.io/seydinalimamoulayeyade)
 
 ---
 
