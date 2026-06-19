@@ -8,17 +8,25 @@
   <!-- SEO Meta Tags -->
   <meta name="description" content="Seydina Limamou Laye Yade — Cloud & DevOps Engineer en formation à l'Orange Digital Center de Dakar. AWS, Docker, Jenkins, Kubernetes.">
   <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Docker, Jenkins, Kubernetes, Dakar, Sénégal, Orange Digital Center">
+  <meta name="author" content="Seydina Limamou Laye Yade">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F0F0D">
+  <link rel="canonical" href="https://seydinalimamoulayeyade.github.io/seydinalimamoulayeyade">
   
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Virtual Voyager — Seydina Limamou Laye Yade">
   <meta property="og:description" content="Cloud & DevOps Engineer · Building in public · Dakar, Sénégal">
-  <meta property="og:url" content="https://seydinalimamoulayeyade.github.io">
+  <meta property="og:url" content="https://seydinalimamoulayeyade.github.io/seydinalimamoulayeyade">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Virtual Voyager">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="https://github.com/seydinalimamoulayeyade.png">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Virtual Voyager — Seydina Limamou Laye Yade">
   <meta name="twitter:description" content="Cloud & DevOps Engineer · Building in public · Dakar, Sénégal">
+  <meta name="twitter:image" content="https://github.com/seydinalimamoulayeyade.png">
   
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌍</text></svg>" />
@@ -157,7 +165,7 @@
       overflow-x: auto;
     }
     .ascii-header pre {
-      font-size: clamp(6px, 1.4vw, 10px);
+      font-size: clamp(7px, 1.6vw, 12px);
       line-height: 1.3;
       color: var(--blue);
       display: inline-block;
@@ -263,22 +271,6 @@
       color: var(--white);
       font-weight: 500;
       white-space: nowrap;
-    }
-    .tool-bar-wrap {
-      height: 3px;
-      background: var(--border);
-      border-radius: 2px;
-      margin-top: 5px;
-      overflow: hidden;
-    }
-    .tool-bar-fill {
-      height: 100%;
-      border-radius: 2px;
-      transition: width 1.2s cubic-bezier(.4,0,.2,1);
-    }
-    .tool-status {
-      font-size: 10px;
-      margin-top: 3px;
     }
 
     /* ── STACK PILLS ── */
@@ -387,11 +379,15 @@
 
       <!-- ASCII -->
       <div class="ascii-header">
-        <pre>   _____    ________  __    ____     ____    _   __    ___
-  / ___/   / ____/\ \/ /   / __ \   /  _/   / | / /   /   |
-  \__ \   / __/    \  /   / / / /   / /    /  |/ /   / /| |
- ___/ /  / /___    / /   / /_/ /  _/ /    / /|  /   / ___ |
-/____/  /_____/   /_/   /_____/  /___/   /_/ |_/   /_/  |_|</pre>
+        <pre> ___ _____   _____ ___ _  _   _     _    ___ __  __   _   __  __  ___  _   _ 
+/ __| __\ \ / /   \_ _| \| | /_\   | |  |_ _|  \/  | /_\ |  \/  |/ _ \| | | |
+\__ \ _| \ V /| |) | || .` |/ _ \  | |__ | || |\/| |/ _ \| |\/| | (_) | |_| |
+|___/___| |_| |___/___|_|\_/_/ \_\ |____|___|_|  |_/_/ \_\_|  |_|\___/ \___/ 
+
+ _      ___   _____  __   ___   ___  ___ 
+| |    /_\ \ / / __| \ \ / /_\ |   \| __|
+| |__ / _ \ V /| _|   \ V / _ \| |) | _| 
+|____/_/ \_\_| |___|   |_/_/ \_\___/|___|</pre>
       </div>
 
       <!-- Typing -->
@@ -417,7 +413,7 @@
           <span class="dim">├──</span> <span class="key">location</span> <span class="dim">:</span> <span class="val">Dakar, Sénégal 🇸🇳</span><br/>
           <span class="dim">├──</span> <span class="key">training</span> <span class="dim">:</span> <span class="val">AWS &amp; DevOps @ Orange Digital Center</span><br/>
           <span class="dim">├──</span> <span class="key">status</span>   <span class="dim">:</span> <span class="green">Building in public ⚡</span><br/>
-          <span class="dim">└──</span> <span class="key">goal</span>     <span class="dim">:</span> <span class="amber">Concevoir des infrastructures qui tournent quand je dors.</span>
+          <span class="dim">└──</span> <span class="key">goal</span>     <span class="dim">:</span> <span class="amber">Concevoir et sécuriser des pipelines CI/CD, du commit au déploiement.</span>
         </div>
       </div>
 
@@ -499,7 +495,8 @@
           </div>
           <div class="vision-goals">
             <div class="vision-goal"><span class="arrow">→</span> AWS CLF-C02 certification</div>
-            <div class="vision-goal"><span class="arrow">→</span> Kubernetes &amp; Terraform mastery</div>
+            <div class="vision-goal"><span class="arrow">→</span> DevSecOps — pipelines sécurisés (Trivy &amp; co.)</div>
+            <div class="vision-goal"><span class="arrow">→</span> AI for DevOps — automatiser l'automatisation</div>
             <div class="vision-goal"><span class="arrow">→</span> Cloud-native architectures en production</div>
           </div>
         </div>
@@ -568,36 +565,26 @@
 
   /* ── TOOLCHAIN ── */
   const tools = [
-    { name: 'Docker',              icon: '🐳', color: '#2496ED', bg: 'rgba(36,150,237,0.12)', pct: 95,  label: '✅ done',        cls: 'green' },
-    { name: 'Jenkins',             icon: '⚙️',  color: '#D24939', bg: 'rgba(210,73,57,0.12)',  pct: 65,  label: '🔄 in progress', cls: 'wip'   },
-    { name: 'SonarQube',           icon: '🔍', color: '#4E9BCD', bg: 'rgba(78,155,205,0.12)', pct: 10,  label: '📍 next',        cls: 'next'  },
-    { name: 'Kubernetes',          icon: '☸️',  color: '#326CE5', bg: 'rgba(50,108,229,0.12)', pct: 0,   label: '⏳ pending',     cls: 'dim'   },
-    { name: 'Terraform',           icon: '🏗️', color: '#7B42BC', bg: 'rgba(123,66,188,0.12)', pct: 0,   label: '⏳ pending',     cls: 'dim'   },
-    { name: 'Prometheus / Grafana',icon: '📊', color: '#E6522C', bg: 'rgba(230,82,44,0.12)',  pct: 0,   label: '⏳ pending',     cls: 'dim'   },
-    { name: 'Trivy',               icon: '🛡️', color: '#1904DA', bg: 'rgba(25,4,218,0.12)',   pct: 0,   label: '⏳ pending',     cls: 'dim'   },
-    { name: 'AI for DevOps',       icon: '🔮', color: '#8A2BE2', bg: 'rgba(138,43,226,0.12)', pct: 0,   label: '🔮 incoming',    cls: 'purple'},
+    { name: 'Docker',              icon: '🐳', color: '#2496ED', bg: 'rgba(36,150,237,0.12)' },
+    { name: 'Jenkins',             icon: '⚙️',  color: '#D24939', bg: 'rgba(210,73,57,0.12)'  },
+    { name: 'SonarQube',           icon: '🔍', color: '#4E9BCD', bg: 'rgba(78,155,205,0.12)' },
+    { name: 'Kubernetes',          icon: '☸️',  color: '#326CE5', bg: 'rgba(50,108,229,0.12)' },
+    { name: 'Terraform',           icon: '🏗️', color: '#7B42BC', bg: 'rgba(123,66,188,0.12)' },
+    { name: 'Prometheus / Grafana',icon: '📊', color: '#E6522C', bg: 'rgba(230,82,44,0.12)'  },
+    { name: 'Trivy',               icon: '🛡️', color: '#1904DA', bg: 'rgba(25,4,218,0.12)'   },
+    { name: 'AI for DevOps',       icon: '🔮', color: '#8A2BE2', bg: 'rgba(138,43,226,0.12)' },
   ];
 
-  const colorMap = { green: '#1D9E75', wip: '#378ADD', next: '#EF9F27', dim: '#5F5E5A', purple: '#AFA9EC' };
-
   const grid = document.getElementById('toolchain');
-  tools.forEach((t, i) => {
+  tools.forEach((t) => {
     const item = document.createElement('div');
     item.className = 'tool-item';
     item.innerHTML = `
       <div class="tool-icon" style="background:${t.bg};">${t.icon}</div>
       <div class="tool-info">
         <div class="tool-name">${t.name}</div>
-        <div class="tool-bar-wrap">
-          <div class="tool-bar-fill" id="bar-${i}" style="width:0%;background:${t.color};"></div>
-        </div>
-        <div class="tool-status" style="color:${colorMap[t.cls] || '#5F5E5A'};">${t.label}</div>
       </div>`;
     grid.appendChild(item);
-    // Animate bars on load with stagger
-    setTimeout(() => {
-      document.getElementById(`bar-${i}`).style.width = t.pct + '%';
-    }, 300 + i * 120);
   });
 </script>
 </body>
