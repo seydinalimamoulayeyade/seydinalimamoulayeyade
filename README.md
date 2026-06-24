@@ -6,7 +6,6 @@
 🔧 AWS · Docker · Jenkins · Kubernetes · Terraform · Prometheus/Grafana · Trivy  
 ⚡ **Building in public** — Automatiser aujourd'hui pour construire des systèmes qui tiennent quand tu dors.
 
----
 
 [![View full terminal profile →](https://img.shields.io/badge/View_full_terminal_profile_%E2%86%92-1D9E75?style=for-the-badge&logo=gnometerminal&logoColor=white)](https://seydinalimamoulayeyade.github.io/seydinalimamoulayeyade)
 
