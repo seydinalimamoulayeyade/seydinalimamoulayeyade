@@ -1,17 +1,5 @@
 <div align="center">
 
-```
- ___ _____   _____ ___ _  _   _     _    ___ __  __   _   __  __  ___  _   _ 
-/ __| __\ \ / /   \_ _| \| | /_\   | |  |_ _|  \/  | /_\ |  \/  |/ _ \| | | |
-\__ \ _| \ V /| |) | || .` |/ _ \  | |__ | || |\/| |/ _ \| |\/| | (_) | |_| |
-|___/___| |_| |___/___|_|\_/_/ \_\ |____|___|_|  |_/_/ \_\_|  |_|\___/ \___/ 
-
-```
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&duration=3000&pause=800&color=1D9E75&center=true&vCenter=true&width=620&lines=Cloud+%26+DevOps+Engineer+%F0%9F%9A%80;aka+Virtual+Voyager+%F0%9F%8C%8D;Building+in+public+%E2%80%94+one+pipeline+at+a+time;Dakar%2C+S%C3%A9n%C3%A9gal+%F0%9F%87%B8%F0%9F%87%B3;Automate+everything.+Ship+things+that+matter.)](https://seydinalimamoulayeyade.github.io/seydinalimamoulayeyade)
-
----
-
 ### 👨‍💻 Seydina Limamou Laye Yade — Cloud & DevOps Engineer
 
 **En formation** à l'**Orange Digital Center** de Dakar, Sénégal 🇸🇳  
@@ -33,13 +21,6 @@
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
 ![Prometheus](https://img.shields.io/badge/Prometheus%2FGrafana-E6522C?style=flat-square&logo=prometheus&logoColor=white)
 ![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat-square&logo=aquasecurity&logoColor=white)
-
-### 🎯 Vision 2026
-
-- ☁️ **AWS CLF-C02** certification
-- 🛡️ **DevSecOps** — sécuriser les pipelines (Trivy & co.)
-- 🤖 **AI for DevOps** — automatiser l'automatisation
-- 🏗️ Deploy **cloud-native architectures** in production
 
 ---
 
