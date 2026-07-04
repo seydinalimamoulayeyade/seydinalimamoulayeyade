@@ -168,6 +168,22 @@
 
   const scrollDown = () => input.scrollIntoView({ block: 'nearest' });
 
+  // Keep the input visible when the mobile keyboard opens / viewport resizes
+  input.addEventListener('focus', () => {
+    document.body.classList.add('keyboard-open');
+    setTimeout(() => input.scrollIntoView({ block: 'center' }), 300);
+  });
+  input.addEventListener('blur', () => {
+    document.body.classList.remove('keyboard-open');
+  });
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', () => {
+      if (document.activeElement === input) {
+        input.scrollIntoView({ block: 'center' });
+      }
+    });
+  }
+
   /* ── HISTORY + RUN ────────────────────────────────────── */
   const history = [];
   let histIndex = -1;

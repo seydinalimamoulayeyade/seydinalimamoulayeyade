@@ -131,6 +131,7 @@ body::before {
   min-height: 340px;
   cursor: text;
 }
+.terminal-output { overflow-wrap: anywhere; }
 .terminal-output > div { margin-bottom: 10px; }
 
 .echo { color: var(--dim); }
@@ -152,6 +153,8 @@ body::before {
   display: flex;
   align-items: center;
   gap: 6px;
+  scroll-margin-bottom: 24px;
+  scroll-margin-top: 24px;
 }
 .terminal-input-line label { color: var(--green); flex-shrink: 0; }
 .terminal-input {
@@ -181,8 +184,12 @@ body::before {
 @media (max-width: 600px) {
   .container { padding: 1rem 0.75rem 3rem; }
   .window-body { padding: 1.25rem 1rem 1rem; }
-  .terminal { font-size: 12px; }
+  .terminal { font-size: 12px; min-height: 220px; padding: 12px 14px; }
 }
+
+/* When the input is focused (mobile keyboard open), add scroll room
+   so the input can be lifted above the keyboard, then removed on blur. */
+body.keyboard-open .container { padding-bottom: 55vh; }
 
 /* ── REDUCED MOTION ── */
 @media (prefers-reduced-motion: reduce) {
