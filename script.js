@@ -54,6 +54,7 @@
         '  <span class="accent">tools</span>     toolchain DevOps\n' +
         '  <span class="accent">projects</span>  projets phares\n' +
         '  <span class="accent">repos</span>     mes dépôts GitHub\n' +
+        '  <span class="accent">roadmap</span>   parcours & certifications\n' +
         '  <span class="accent">vision</span>    objectifs & vision\n' +
         '  <span class="accent">contact</span>   liens & réseaux\n' +
         '  <span class="accent">clear</span>     nettoyer le terminal\n' +
@@ -113,6 +114,14 @@
         '→ <a href="' + profile.links.github + '" target="_blank" rel="noopener">github.com/seydinalimamoulayeyade</a>'
       );
     },
+    roadmap() {
+      return (
+        '<span class="accent">[✓]</span> Software Engineering\n' +
+        '<span class="accent">[✓]</span> IBM DevOps\n' +
+        '<span class="amber">[⟳]</span> AWS Certified Cloud Practitioner (CLF-C02) <span class="muted">— en cours</span>\n' +
+        '<span class="muted">[ ] AWS Solutions Architect Associate</span>'
+      );
+    },
     vision() {
       return (
         '<span class="accent">"Automatiser aujourd\'hui, c\'est gagner du temps pour demain —\n' +
@@ -142,7 +151,7 @@
 
   // primary command names used for Tab completion
   const commandNames = [
-    'help', 'whoami', 'stack', 'tools', 'projects', 'repos', 'vision', 'contact', 'clear'
+    'help', 'whoami', 'stack', 'tools', 'projects', 'repos', 'roadmap', 'vision', 'contact', 'clear'
   ];
 
   // longest common prefix of a list of strings

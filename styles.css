@@ -139,6 +139,7 @@ body::before {
 
 .result { color: var(--white); }
 .result .accent { color: var(--green); }
+.result .amber { color: var(--amber); }
 .result .muted { color: var(--dim); }
 .result.muted { color: var(--dim); }
 .result.err { color: var(--red); }
