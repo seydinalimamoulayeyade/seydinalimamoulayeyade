@@ -15,7 +15,10 @@ Tape `whoami`, `projects`, `stack`… et explore.
 
 <br/>
 
-[![Stats](https://github-readme-stats.vercel.app/api?username=seydinalimamoulayeyade&show_icons=true&hide_border=true&title_color=1D9E75&icon_color=1D9E75&text_color=D3D1C7&bg_color=0F0F0D)](https://github.com/seydinalimamoulayeyade)
+[![Stats](https://github-readme-stats-fast.vercel.app/api?username=seydinalimamoulayeyade&show_icons=true&hide_border=true&title_color=1D9E75&icon_color=1D9E75&text_color=D3D1C7&bg_color=0F0F0D)](https://github.com/seydinalimamoulayeyade)
+[![Top Langs](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=seydinalimamoulayeyade&layout=compact&hide_border=true&title_color=1D9E75&text_color=D3D1C7&bg_color=0F0F0D)](https://github.com/seydinalimamoulayeyade)
+
+[![Streak](https://github-readme-stats-fast.vercel.app/api/streak?username=seydinalimamoulayeyade&hide_border=true&background=0F0F0D&stroke=2E2E2B&ring=1D9E75&fire=1D9E75&currStreakLabel=1D9E75&currStreakNum=D3D1C7&sideNums=D3D1C7&sideLabels=D3D1C7&dates=8A8983)](https://github.com/seydinalimamoulayeyade)
 
 [![Graphe des contributions](https://github-readme-activity-graph.vercel.app/graph?username=seydinalimamoulayeyade&hide_border=true&area=true&bg_color=0F0F0D&color=D3D1C7&line=1D9E75&point=1D9E75&title_color=1D9E75)](https://github.com/seydinalimamoulayeyade)
 
