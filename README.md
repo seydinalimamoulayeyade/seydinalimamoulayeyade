@@ -17,6 +17,8 @@ Tape `whoami`, `projects`, `stack`… et explore.
 
 [![Stats](https://github-readme-stats.vercel.app/api?username=seydinalimamoulayeyade&show_icons=true&hide_border=true&title_color=1D9E75&icon_color=1D9E75&text_color=D3D1C7&bg_color=0F0F0D)](https://github.com/seydinalimamoulayeyade)
 
+[![Graphe des contributions](https://github-readme-activity-graph.vercel.app/graph?username=seydinalimamoulayeyade&hide_border=true&area=true&bg_color=0F0F0D&color=D3D1C7&line=1D9E75&point=1D9E75&title_color=1D9E75)](https://github.com/seydinalimamoulayeyade)
+
 <sub>[LinkedIn](https://linkedin.com/in/limamou-laye) · [Docker Hub](https://hub.docker.com/u/lims4) · [Email](mailto:seydinalimamoulayeyade@gmail.com)</sub>
 
 </div>
