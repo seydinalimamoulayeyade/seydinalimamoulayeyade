@@ -1,0 +1,195 @@
+/* ============================================================
+   Virtual Voyager — Terminal Profile
+   Seydina Limamou Laye Yade · Cloud & DevOps Engineer
+   ============================================================ */
+
+:root {
+  --bg:        #0F0F0D;
+  --bg2:       #191917;
+  --bg3:       #222220;
+  --border:    #2E2E2B;
+  --green:     #1D9E75;
+  --blue:      #378ADD;
+  --purple:    #7F77DD;
+  --amber:     #EF9F27;
+  --teal:      #5DCAA5;
+  --white:     #D3D1C7;
+  --dim:       #8A8983;
+  --red:       #E24B4A;
+  --font-mono: 'Fira Code', ui-monospace, 'Cascadia Code', monospace;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --radius:    8px;
+  --focus:     #5DCAA5;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--font-mono);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* ── ACCESSIBILITY HELPERS ── */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 200;
+  background: var(--green);
+  color: var(--bg);
+  padding: 8px 14px;
+  border-radius: 0 0 var(--radius) 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+}
+.skip-link:focus { left: 0; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* ── SCANLINE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.04) 2px,
+    rgba(0,0,0,0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* ── LAYOUT ── */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+/* ── WINDOW CHROME ── */
+.window {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.03), 0 32px 64px rgba(0,0,0,0.6);
+}
+
+.window-bar {
+  background: #272725;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.dot-r { background: var(--red); }
+.dot-y { background: var(--amber); }
+.dot-g { background: #639922; }
+.window-title {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  color: var(--dim);
+  letter-spacing: 0.05em;
+}
+
+.window-body { padding: 2rem 2rem 1.5rem; }
+
+/* ── INTERACTIVE TERMINAL ── */
+.terminal {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  font-size: 13px;
+  line-height: 1.75;
+  min-height: 340px;
+  cursor: text;
+}
+.terminal-output > div { margin-bottom: 10px; }
+
+.echo { color: var(--dim); }
+.echo .cmd-txt { color: var(--white); }
+
+.result { color: var(--white); }
+.result .accent { color: var(--green); }
+.result .muted { color: var(--dim); }
+.result.muted { color: var(--dim); }
+.result.err { color: var(--red); }
+.result a { color: var(--blue); text-decoration: none; }
+.result a:hover,
+.result a:focus-visible { text-decoration: underline; }
+
+.prompt-user { color: var(--teal); }
+.prompt-host { color: var(--purple); }
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.terminal-input-line label { color: var(--green); flex-shrink: 0; }
+.terminal-input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  caret-color: var(--green);
+}
+.terminal-input:focus { outline: none; }
+.terminal-input::placeholder { color: var(--dim); opacity: 0.7; }
+
+/* ── FOOTER ── */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 11px;
+  color: var(--dim);
+}
+.footer .vv { color: var(--purple); }
+.footer a { color: var(--dim); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .container { padding: 1rem 0.75rem 3rem; }
+  .window-body { padding: 1.25rem 1rem 1rem; }
+  .terminal { font-size: 12px; }
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
