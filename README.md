@@ -7,7 +7,7 @@
 Mon profil n'est pas une page — c'est un terminal.
 Tape `whoami`, `projects`, `stack`… et explore.
 
-`# focus` — Préparation certification **AWS CLF-C02** · pipelines DevSecOps
+`# focus` — Préparation certification **AWS SAA-C03** · pipelines DevSecOps
 
 <br/>
 
