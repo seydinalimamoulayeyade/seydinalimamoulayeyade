@@ -15,7 +15,11 @@ Tape `whoami`, `projects`, `stack`… et explore.
 
 <br/>
 
-[![Stats](https://github-readme-stats-fast.vercel.app/api?username=seydinalimamoulayeyade&show_icons=true&include_all_commits=true&hide_border=true&hide=contribs&title_color=1D9E75&icon_color=1D9E75&text_color=D3D1C7&bg_color=0F0F0D)](https://github.com/seydinalimamoulayeyade)
+<p align="center">
+  <a href="https://github.com/seydinalimamoulayeyade">
+    <img src="https://github-stats-extended.vercel.app/api?username=seydinalimamoulayeyade&hide_title=true&show_icons=true&include_all_commits=true&theme=vue-dark" alt="Stats GitHub" />
+  </a>
+</p>
 
 <sub>[LinkedIn](https://linkedin.com/in/limamou-laye) · [Docker Hub](https://hub.docker.com/u/lims4) · [Email](mailto:seydinalimamoulayeyade@gmail.com)</sub>
 
